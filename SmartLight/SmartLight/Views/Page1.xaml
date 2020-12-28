@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:SmartLight.ViewModels"  
+             xmlns:model="clr-namespace:SmartLight.Models"  
+             x:Class="SmartLight.Views.Page1"
+             
+             BackgroundColor="#131315">
+    
+    
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Name="      Устройства      " Order="Primary" Priority="0"  Clicked="Button_Clicked" />
+        <ToolbarItem Name="      Расчёт зональности      " Order="Primary" Priority="1" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" >
+                <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="20"  >
+                <Label Text="Тип помещения:" TextColor="#d4d3d8" Padding="15" />
+                <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged"  HeightRequest="42" WidthRequest="222" FontSize="20" TextColor="#d4d3d8">
+                    <Picker.Items>
+                        <x:String>Офис</x:String>
+                        <x:String>Дом</x:String>
+                        <x:String>Библиотека</x:String>
+                        <x:String>Склеп</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label Text="Необходимая освещенность,Лк:" TextColor="#d4d3d8" Padding="15" />
+                <Entry x:Name="entry1" Text="300" TextColor="#d4d3d8"  />
+            </StackLayout>
+                    <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="74" HorizontalOptions="StartAndExpand">
+                <Label Text="Длина помещений,м:" TextColor="#d4d3d8" Padding="15" />
+                <Entry x:Name="entry2" Text="9" TextColor="#d4d3d8" />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="64">
+                <Label Text="Ширина помещений,м:" TextColor="#d4d3d8" Padding="15" />
+                <Entry x:Name="entry3" Text="6" TextColor="#d4d3d8" />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="67">
+                <Label Text="Высота помещения,м:" TextColor="#d4d3d8" Padding="15" />
+                <Entry x:Name="entry4" Text="3,2" TextColor="#d4d3d8" />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label Text="Высота рабочей поверхности,м:" TextColor="#d4d3d8" Padding="15" />
+                <Entry x:Name="entry5" Text="0,8" TextColor="#d4d3d8" />
+        </StackLayout>
+        <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="2">
+                <Label Text="Характеристики поверхностей:" TextColor="#d4d3d8" Padding="15" />
+                <Picker x:Name="picker1" SelectedIndexChanged="picker_SelectedIndexChanged"  HeightRequest="42" WidthRequest="140" FontSize="14" TextColor="#d4d3d8">
+                    <Picker.Items>
+                        <x:String>Коэф. отражения 80-50-30</x:String>
+                        <x:String>Коэф. отражения 80-50-30</x:String>
+                        <x:String>Коэф. отражения 80-50-30</x:String>
+                        <x:String>Коэф. отражения 80-50-30</x:String>
+                    </Picker.Items>
+                </Picker>
+        </StackLayout>
+        <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="50">
+                <Label Text="Коэффициент запаса:" TextColor="#d4d3d8" Padding="15" />
+                <Picker x:Name="picker2" SelectedIndexChanged="picker_SelectedIndexChanged"  HeightRequest="42" WidthRequest="157" FontSize="20" TextColor="#d4d3d8">
+                    <Picker.Items>
+                        <x:String>k=1,25</x:String>
+                        <x:String>k=1,35</x:String>
+                        <x:String>k=1,45</x:String>
+                        <x:String>k=1,5</x:String>
+                    </Picker.Items>
+                </Picker>
+                </StackLayout>
+                    <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand">
+                <Label Text="Необходимое количество светильников:" TextColor="#d4d3d8" Padding="15" />
+                <Label x:Name="calcOutput" TextColor="#d4d3d8" Padding="15"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="0" Padding="15" HorizontalOptions="StartAndExpand" >
+                <Button Text="Расчитать" BackgroundColor="#131315" FontSize="20" HorizontalOptions="Start" VerticalOptions="Start" TextColor="#d4d3d8" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

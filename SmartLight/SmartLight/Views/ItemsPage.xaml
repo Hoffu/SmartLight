@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartLight.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:SmartLight.ViewModels"  
+             xmlns:model="clr-namespace:SmartLight.Models"  
+             x:Name="BrowseItemsPage"
+             BackgroundColor="#131315">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="      Устройства      " Order="Primary" Priority="0"  />
+        <ToolbarItem Name="      Расчёт зональности      " Order="Primary" Priority="1" Clicked="Button_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+
+
+
+    <Grid>
+        <StackLayout CompressedLayout.IsHeadless="true"  Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Image Grid.Row="1" x:Name="img1" Source="lamp_active.png" Aspect="Fill"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+
+            </Grid>
+            
+            <!--
+            <RadioButton Text="Device1" 
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontSize="30" TextColor="#d4d3d8"/>
+            <Image Source="line.png" />
+            <RadioButton Text="Device2"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontSize="30" TextColor="#d4d3d8" />
+            <Image Source="line.png" />
+            <RadioButton Text="Device3"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontSize="30" TextColor="#d4d3d8"/>
+            <Image Source="line.png" />
+            <RadioButton Text="Device4"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontSize="30" TextColor="#d4d3d8"/>
+            <Image Source="line.png" />
+             -->
+
+
+
+            <Button Text="Подключить устройство" BackgroundColor="#131315" HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        ContentLayout="Right, 505" FontSize="Title"  VerticalOptions="StartAndExpand" HeightRequest="48"  TextColor="#d4d3d8" Clicked="Button_Clicked_2"/>
+
+      
+        </StackLayout>
+        
+    </Grid>
+   
+</ContentPage>

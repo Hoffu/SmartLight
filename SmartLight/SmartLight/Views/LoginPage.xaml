@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar"
+             mc:Ignorable="d"
+             x:Class="SmartLight.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#131315">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0">
+            <controls:Calendar
+                Month="11"
+                Year="2020"
+                MonthLabelColor="#41ab8a"
+                YearLabelColor="#41ab8a"
+                SelectedDateColor="#41ab8a"
+                SelectedDayBackgroundColor="#41ab8a"
+                EventIndicatorColor="Red"
+                EventIndicatorSelectedColor="#d4d3d8"
+                DaysTitleColor="#41ab8a"
+                SelectedDayTextColor="#131315"
+                DeselectedDayTextColor="#d4d3d8"
+                OtherMonthDayColor="#656565"
+                TodayOutlineColor="#41ab8a"
+                TodayFillColor="#131315"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

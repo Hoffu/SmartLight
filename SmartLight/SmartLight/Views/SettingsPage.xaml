@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartLight.Views.SettingsPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#131315">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <StackLayout  Padding="2">
+                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                        <Button TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="settings_arrow.png" ContentLayout="Right, 250"
+                        Text="Язык приложения" FontSize="Title" BackgroundColor="#131315"/>
+                    </StackLayout>
+                    <Label Text="Соответствует языку приложения" TextColor="#d4d3d8" FontSize="12"/>
+                </StackLayout>
+                <Image Source="line.png" />
+                <StackLayout   Padding="2">
+                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                        <Button TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="settings_arrow.png" ContentLayout="Right, 250"
+                        Text="Автоподключение" FontSize="Title" BackgroundColor="#131315"
+                        Clicked="Button_Clicked_1"/>
+                    </StackLayout>
+                    <Label Text="Выкл" TextColor="#d4d3d8" FontSize="12" x:Name="lblStatus" />
+                </StackLayout>
+                <Image Source="line.png" />
+                <StackLayout   Padding="2">
+                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                        <Button TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="settings_arrow.png" ContentLayout="Right, 630"
+                        Text="Справка" FontSize="Title" BackgroundColor="#131315"
+                        Clicked="Button_Clicked_2"/>
+                       
+                    </StackLayout>
+                    
+                </StackLayout>
+              
+                <Image Source="line.png" />
+                <StackLayout   Padding="2">
+                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                        <Button TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="settings_arrow.png" ContentLayout="Right, 630"
+                        Text="Авторизация" FontSize="Title" BackgroundColor="#131315"
+                        Clicked="Button_Clicked_3"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

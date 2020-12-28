@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:SmartLight.Views"
+       Title="SmartLight"
+       x:Class="SmartLight.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#131315" />
+                <Setter Property="Shell.ForegroundColor" Value="#d4d3d8" />
+                <Setter Property="Shell.TitleColor" Value="#d4d3d8" />
+                <Setter Property="Shell.DisabledColor" Value="#d4d3d8" />
+                <Setter Property="Shell.UnselectedColor" Value="#d4d3d8" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#131315" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="#41ab8a"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#d4d3d8"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#41ab8a"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Главная" Icon="main_icon.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Освещение" Icon="smart_light_icon.png" Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="График" Icon="schedule_icon.png" Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+        <ShellContent Title="Настройки" Icon="settings_icon.png" Route="SettingsPage" ContentTemplate="{DataTemplate local:SettingsPage}" />
+    </TabBar>
+
+    <!--
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+    <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />
+
+
+</Shell>

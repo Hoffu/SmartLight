@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartLight.Views.Page3"
+             BackgroundColor="#131315">
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="layout" >
+            <StackLayout Orientation="Horizontal" Spacing="230" >
+                <Button  Text="Profile1" TextColor="#d4d3d8" BackgroundColor="#131315" FontSize="Title" Clicked="Button_Clicked_1" />
+                <Switch IsToggled="false"  Toggled= "Switch_Toggled"  />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="230" >
+                <Button  Text="Profile2" TextColor="#d4d3d8" BackgroundColor="#131315" FontSize="Title" Clicked="Button_Clicked_2" />
+                <Switch IsToggled="false"  Toggled= "Switch_Toggled" />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="230" >
+                <Button  Text="Profile3" TextColor="#d4d3d8" BackgroundColor="#131315" FontSize="Title" Clicked="Button_Clicked_3" />
+                <Switch IsToggled="false"  Toggled= "Switch_Toggled" />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="230" >
+                <Button  Text="Profile4" TextColor="#d4d3d8" BackgroundColor="#131315" FontSize="Title" Clicked="Button_Clicked_4" />
+                <Switch IsToggled="false"  Toggled= "Switch_Toggled" />
+            </StackLayout>
+            <Image Source="line.png" />
+            <StackLayout Orientation="Horizontal" Spacing="230" >
+                <Button  Text="Profile5" TextColor="#d4d3d8" BackgroundColor="#131315" FontSize="Title" Clicked="Button_Clicked_5" />
+                <Switch IsToggled="false"  Toggled= "Switch_Toggled" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

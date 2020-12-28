@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartLight.Views.Page4"
+             BackgroundColor="#131315">
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="layout">
+            <StackLayout Orientation="Horizontal" Spacing="25">
+            <Button  Text="Найти устройство" TextColor="#d4d3d8" BackgroundColor="#131315" FontSize="Title" Clicked="Button_Clicked" x:Name="ButtonTime" />
+                <ActivityIndicator IsRunning="False"  IsEnabled="False" Color="Orange" x:Name="Indic"/>
+        </StackLayout>
+           
+            
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

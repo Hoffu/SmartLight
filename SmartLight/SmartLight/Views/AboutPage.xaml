@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartLight.Views.AboutPage"
+             xmlns:vm="clr-namespace:SmartLight.ViewModels"
+             Title="{Binding Title}"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#131315">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <StackLayout CompressedLayout.IsHeadless="true"  Orientation="Vertical">
+            <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+            <Image Grid.Row="1" x:Name="img2" Aspect="Fill"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Image.Source>
+                    <FileImageSource File="{Binding MainBackgroundImage}" />
+                </Image.Source>
+            </Image>
+                
+
+            </Grid>
+            <!--
+            <Button TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="edit.png" ContentLayout="Right, 505"
+                        Text="Profile 1" FontSize="Title" BackgroundColor="#131315" />
+            <Image Source="line.png" />
+            <Button TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="edit.png" ContentLayout="Right, 505"
+                        Text="Profile 2" FontSize="Title" BackgroundColor="#131315"/>
+            <Image Source="line.png" />
+            <Button TextColor="#d4d3d8" HeightRequest="48" 
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        Image="edit.png" ContentLayout="Right, 505" 
+                        Text="Profile 3" FontSize="Title" BackgroundColor="#131315"/>
+-->
+            <Button TextColor="#d4d3d8" HeightRequest="48" 
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        ContentLayout="Right, 505" 
+                        Text="Подключить профиль" FontSize="Title" BackgroundColor="#131315" Clicked="Button_Clicked_1"/>
+
+        </StackLayout>
+        
+    </Grid>
+
+</ContentPage>

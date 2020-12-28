@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartLight.Views.Profile5"
+             BackgroundColor="#131315">
+
+    <ContentPage.Content>
+        <StackLayout x:Name="layout" >
+            <StackLayout  Orientation="Horizontal" Spacing="10">
+
+                <Label x:Name="label" Text="Дата"
+                   TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                         FontSize="Title" BackgroundColor="#131315"/>
+                <DatePicker Format="D" DateSelected="datePicker_DateSelected"
+                         TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                         FontSize="Title" BackgroundColor="#131315">
+                    <DatePicker.MinimumDate>1/01/1900</DatePicker.MinimumDate>
+                    <DatePicker.MaximumDate>12/31/2070</DatePicker.MaximumDate>
+                </DatePicker>
+
+            </StackLayout>
+            <StackLayout  Orientation="Horizontal" Spacing="10">
+
+                <Label x:Name="label1" Text="Время"
+                   TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                         FontSize="Title" BackgroundColor="#131315"/>
+
+                <TimePicker x:Name="tp" Format=" HH:mm"
+                         TextColor="#d4d3d8" HeightRequest="48"
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                         FontSize="Title" BackgroundColor="#131315"/>
+
+            </StackLayout>
+            <StackLayout  Orientation="Horizontal" Spacing="10">
+                <Button TextColor="#d4d3d8" HeightRequest="48" 
+                        HorizontalOptions="FillAndExpand" FontFamily="YandexSansDisplay"
+                        ContentLayout="Right, 505" 
+                        Text="Добавить девайс" FontSize="Title" BackgroundColor="#131315"
+                        Clicked="Button_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
